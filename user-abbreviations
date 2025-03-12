@@ -1,0 +1,2 @@
+abbr -g "lsa"="ls -lA"
+abbr -g "v"="nvim"

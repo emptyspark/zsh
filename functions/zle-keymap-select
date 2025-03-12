@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+case $KEYMAP in
+    vicmd) echo -ne '\e[1 q';; # block
+    viins|main) echo -ne '\e[5 q';; # beam
+esac

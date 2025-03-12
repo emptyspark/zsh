@@ -1,0 +1,14 @@
+###########################
+##    Antidote Plugins   ##  
+###########################   
+# $ZDOTDIR/.zsh_plugins.txt
+
+lukechilds/zsh-nvm
+
+olets/zsh-abbr
+marlonrichert/zsh-hist
+aloxaf/fzf-tab
+
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
