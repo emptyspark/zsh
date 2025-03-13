@@ -1,2 +1,4 @@
 abbr -g "lsa"="ls -lA"
+abbr -g "path"="echo -e \"\${PATH//:/\\n}\""
 abbr -g "v"="nvim"
+abbr -g "y"="yazi"
