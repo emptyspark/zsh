@@ -71,9 +71,7 @@ alias pactree='pactree -c'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias ehist='nvim /mnt/c/Users/jeffr/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt'
 alias epro='nvim /mnt/c/Users/jeffr/Documents/PowerShell/Microsoft.PowerShell_profile.ps1'
-alias yazi=y
-alias ssh='ssh.exe'
-alias ssh-add='ssh-add.exe'
+alias yazi='y'
 
 # View man pages with Bat
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
