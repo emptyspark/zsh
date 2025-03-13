@@ -120,15 +120,17 @@ bindkey -M viins '^[r' fzf-delete-history-widget
 bindkey -M vicmd '^[r' fzf-delete-history-widget
 bindkey -M emacs '^[r' fzf-delete-history-widget
 
-if [[ -z $+commands[zoxide] ]]; then
-  curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+if [[ $+commands[zoxide] ]]; then
+   eval "$(zoxide init zsh --cmd cd)"; else
+   echo "Zoxide not found, install from repo"
 fi
 
-# - Superfluous conditionals, might be worth optimizing.
-#   eval "$(zoxide init zsh --cmd cd)"
-# elif
-#   [[ -v $+commands[zoxide] ]]; then
+if [[ $+commands[fzf] ]]; then
+   source <(fzf --zsh); else
+   echo "Fzf not found, install from repo"
+fi
 
-source <(fzf --zsh)
-eval "$(zoxide init zsh --cmd cd)"
-eval "$(starship init zsh)"
+if [[ -f "$ZDOTDIR/starship.toml" ]]; then
+   eval "$(starship init zsh)"; else
+   echo "Starship not found, install from repo"
+fi
